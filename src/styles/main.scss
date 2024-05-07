@@ -1,0 +1,16 @@
+// tailwindcss
+@import 'tailwind.scss';
+
+// Abstracts
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+
+// Base
+@import 'base/globals';
+@import 'base/reset';
+
+// Components
+@import 'components/inputs';
+@import 'components/buttons';
+
+@import 'react-toastify/dist/ReactToastify.css';

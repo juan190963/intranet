@@ -1,0 +1,33 @@
+.sidebar {
+	&__wrapper {
+		background-color: var(--primary-color);
+
+		&--hover {
+			&:hover {
+				width: 288px !important;
+				img {
+					display: block;
+				}
+				span {
+					display: block;
+				}
+			}
+
+			img {
+				display: none;
+			}
+
+			span {
+				display: none;
+			}
+		}
+	}
+
+	&__header {
+		border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+	}
+}
+
+.active {
+	background-color: #0e2253;
+}

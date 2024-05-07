@@ -1,0 +1,13 @@
+:root {
+	--primary-color: #{$primary-color};
+	--primary-color-hover: #{$primary-color-hover};
+	--white-color: #{$white-color};
+}
+
+.bg {
+ &__primary {
+	&-color {
+		background-color: var(--primary-color);
+	}
+ }
+}

@@ -1,0 +1,70 @@
+.dashboard__content {
+  height: calc(100% - 80px);
+
+  @include responsive(mobile) {
+    height: calc(100% - 90px);
+  }
+}
+
+.dashboard__nav {
+  .dashboard__nav--header {
+    justify-content: space-between;
+  }
+
+  &--hover {
+    .dashboard__nav-option {
+      span {
+        display: none;
+      }
+
+      button {
+        justify-content: center;
+      }
+    }
+
+    img {
+      display: none;
+    }
+
+    &:hover {
+      width: 18rem;
+
+      img {
+        display: block;
+      }
+
+      .dashboard__nav-option {
+        span {
+          display: block;
+        }
+
+        button {
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+}
+
+.dashboard__nav-option {
+  &:hover,
+  &.active {
+    background-color: darken($primary-color, 10%);
+
+    button {
+      &::before {
+        content: '';
+        display: block;
+        width: 3px;
+        position: absolute;
+        background-color: white;
+        bottom: 0;
+        right: 0;
+        height: 100%;
+        opacity: 1;
+        pointer-events: none;
+        left: 0;
+      }
+    }
+  }
+}

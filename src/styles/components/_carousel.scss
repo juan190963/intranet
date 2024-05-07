@@ -1,0 +1,8 @@
+.carousel__img {
+  opacity: 1;
+  transition: opacity 1s ease 0s;
+}
+
+.carousel__img.fade {
+  opacity: 0;
+}
