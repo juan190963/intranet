@@ -4,7 +4,7 @@ import { LogoProps } from './interface';
 
 export const Logo: React.FC<LogoProps> = ({ width, height }) => (
 	<img
-		className='block transition-all'
+		className='block transition-all logoPD'
 		src={LogoImg}
 		width={width}
 		height={height}

@@ -25,6 +25,6 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["src"],
+  "include": ["src", "src/components/molecules/Recuperation/.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

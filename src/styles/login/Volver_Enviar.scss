@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.buttons{
+    display: flex;
+}
+
+.buttons--Recuperation__volver{
+    position: relative;
+    background-color: #C5C5FF;
+    width: 94px;
+    height: 36px;
+    border-radius: 6px;
+    font-family: 'Ubuntu';
+    color: #1B1B79;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    align-items: center;
+    transition: box-shadow 0.1s ease;
+    left: 16px;
+}
+
+.buttons--Recuperation__volver:hover{
+    color: #1B1B79;
+    background-color: #fff;
+    box-shadow: 0px 5px 6px rgba(94, 87, 190, 0.7); 
+}
+
+.buttons--Recuperation__enviar{
+    position: relative;
+    width: 94px;
+    height: 36px;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    color: #1B1B79;
+    font-family: 'Ubuntu';
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    align-items: center;
+    right: 20px;
+}
+
+.buttons--Recuperation__enviar:hover{
+    background-color: #1B1B79;
+    color: #fff;
+}

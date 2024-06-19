@@ -27,8 +27,17 @@ export const AppRoutes: React.FC = () => {
 			element: lazy(async () => await import('@/pages/Login/Login')),
 		},
 		{
+			path: '/email',
+			element: lazy(async () => await import ('@/pages/Login/Email')),
+		},
+
+		{
+			path: '/password',
+			element: lazy(async () => await import ('@/pages/Login/Password')),
+		},
+		{
 			layout: lazy(async () => await import('@/pages/Dashboard/Dashboard')),
-			children: [
+			children: [ 
 				{
 					path: '/not-permission',
 					element: lazy(
