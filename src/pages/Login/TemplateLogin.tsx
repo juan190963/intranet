@@ -1,13 +1,14 @@
 // src/components/Template.tsx
 import React from 'react';
-import '../../styles/login/imagenesLogin.scss'
-import JSPORT from '../../assets/login/images/JSPORT.jpg';
-import KAPPA from '../../assets/login/images/KAPPA.jpg';
-import NEW from '../../assets/login/images/NEW.jpg';
-import TNF from '../../assets/login/images/TNF.jpg';
-import SG from '../../assets/login/images/SG.jpg';
-import VANS from '../../assets/login/images/VANS.jpg';
-import SM from '../../assets/login/images/SM.jpg';
+import '@/styles/login/imagenesLogin.scss'
+
+import JSPORT from '@/assets/login/images/JSPORT.jpg';
+import KAPPA from '@/assets/login/images/KAPPA.jpg';
+import NEW from '@/assets/login/images/NEW.jpg';
+import TNF from '@/assets/login/images/TNF.jpg';
+import SG from '@/assets/login/images/SG.jpg';
+import VANS from '@/assets/login/images/VANS.jpg';
+import SM from '@/assets/login/images/SM.jpg';
 
 type TemplateProps = {
     children: React.ReactNode;
@@ -19,9 +20,9 @@ return (
         <div className='w-full sm:w-2/6'>
             {children}
         </div>
-        {<div className='img-login'>
+        {<div>
 
-            <img src={JSPORT} className='img-login__jsport' />
+            {/* <img src={JSPORT} className='img-login__jsport ' />
 
             <img src={KAPPA} className='img-login__kappa' />
 
@@ -33,8 +34,7 @@ return (
 
             <img src={VANS} className='img-login__vans' />
 
-            <img src={SM} className='img-login__sm' />
-
+            <img src={SM} className='img-login__sm' /> */}
         </div>
 
         }

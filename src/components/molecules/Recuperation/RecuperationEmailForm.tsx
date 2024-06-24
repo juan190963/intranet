@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import '../../../styles/login/loginForm.scss'
-import '../../../styles/login/Volver_Enviar.scss'
+import '../../../styles/login/componentLogin.scss'
 import { useForm } from 'react-hook-form';
 import { ErrorMessage } from '../../atoms/ErrorMessage/ErrorMessage';
 import { LoginData } from '@/types/authTypes';
@@ -44,7 +44,7 @@ export const EmailRecuperation: React.FC = () => {
 					<Logo width={size.width < 768 ? '100' : '173'} height='auto' />
 				</div>
 				<div className='flex max-sm:px-5 mt-5 mb-2 sm:mt-0 sm:mb-0 px-10 items-center justify-center sm:h-20'>
-					<h1 className='text-white title'>INGRESA TU E-MAIL EMPRESARIAL PARA CAMBIAR LA CONTRASEÑA</h1>
+					<h1 className='text-white title font-bold text-lg text-center'>INGRESA TU E-MAIL EMPRESARIAL PARA CAMBIAR LA CONTRASEÑA</h1>
 				</div>
 				<form
 					onSubmit={handleSubmit(onSubmit)}
@@ -54,34 +54,33 @@ export const EmailRecuperation: React.FC = () => {
 						<div className='mb-2'>
 							<label
 								htmlFor='email'
-								className='block text-base font-medium text-white credentials'
+								className='block text-base font-medium text-white credentials ml-7'
 							>
-								Email empresarial
+								email empresarial
 								<input
 									type='email'
 									id='email'
 									autoComplete='off'
 									{...register('email', inputProps.email)}
-									className={`input focus-visible:shadow-none ${errors.email ? 'input--error' : ''} input` }
+									className={`input focus-visible:shadow-none ${errors.email ? 'input--error' : ''} input bg-indigo-600 border-solid	credentials ` }
+									placeholder='@pernine.com'
 								/>
 							</label>
 							<ErrorMessage error={errors.email?.message} />
 						</div>
 						
-						<div className='buttons'>
-							<Link to='/' rel='noreferrer' className='m-auto mt-5 px-4 py-2 buttons--Recuperation__volver'>
+						<div className='flex'>
+							<button type='submit' className='relative w-20 h-10 bg-indigo-300 font-bold text-sm text-center text-indigo-950	
+							top-5  Recuperation__return '>
+							<Link to='/login' rel='noreferrer' className='text-white__return'>
 								VOLVER
 							</Link>
-							
-						
+							</button>
 
-						
-							<Link to='/password' rel='noreferrer' className='m-auto mt-5 px-4 py-2 buttons--Recuperation__enviar'>
+							<button type='submit' className='relative w-20 h-10 bg-white font-bold text-sm text-center text-indigo-950	
+							top-5  Recuperation__send '>
 								ENVIAR
-							</Link>
-							
-						
-						
+							</button>
 						</div>
 						
 						

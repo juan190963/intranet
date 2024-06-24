@@ -23,18 +23,23 @@ interface RouteProps {
 export const AppRoutes: React.FC = () => {
 	const routes: RouteProps[] = [
 		{
-			path: '/login',
-			element: lazy(async () => await import('@/pages/Login/Login')),
-		},
-		{
-			path: '/email',
+			layout: lazy(async () => await import('@/pages/Login/TemplateLogin')),
+			children: [
+				{
+					path: '/login',
+					element: lazy(async () => await import('@/pages/Login/Login')),
+				},
+				{
+					path: '/email',
 			element: lazy(async () => await import ('@/pages/Login/Email')),
+				},
+				{
+					path: '/password',
+			element: lazy(async () => await import ('@/pages/Login/Password')),
+				}
+			]
 		},
 
-		{
-			path: '/password',
-			element: lazy(async () => await import ('@/pages/Login/Password')),
-		},
 		{
 			layout: lazy(async () => await import('@/pages/Dashboard/Dashboard')),
 			children: [ 

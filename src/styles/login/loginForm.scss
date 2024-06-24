@@ -1,73 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-
-
 .container {
 	background-color: var(--primary-color);
 	border-radius: 0px 109px 109px 0px;
 	width: 510px;
 	height: 980px;
-	
-}
-
-
-.logoPD{
-	width: 173px;
-	height: 100px;
-	
 }
 
 .title{
 	font-family: 'Ubuntu';
-	font-weight: 700;
-	font-size: 18px;
-	text-align: center;
+	color: #ffffff;
 }
 
 .credentials{
 	font-family: 'Ubuntu';
-	font-weight: 500;
-	font-size: 15px;
-	align-items: center;
-	margin-left: 10%;
+	color: #bbbbf8;
 }
 
 .input{
 	color: #bbbbf8;
-	background-color: #3131A6;
-	border: 3px solid #1B1B79;
+	border: 2px solid #1B1B79;
 	border-radius: 3px;
-	width: 260px;
-	height: 35px;
+	width: 250px;
+	height: 30px;
 	border: 2px;
+}
+
+.input__Password{
+	width: 250px;
+	height: 32px;
 }
 
 .input:focus {
 	background-color:  #3131A6;
-	border: 3px solid #1B1B79;
+	border: 2px solid #1B1B79;
   }
 
+// .remember{
+// 	appearance: none;
+// 	background-color: transparent;
+// 	border: 1px solid #d1d5db; /* Tailwind's border-gray-300 */
+// 	width: 1rem;
+// 	height: 1rem;
+// }
+
 .loginButton{
-	width: 150px;
-	height: 40px;
 	font-family: 'Ubuntu';
 	color:#3131A6 ;
-	font-weight: 1000;
-	font-size: 14px;
 }
 
 .loginButton:hover{
 	font-family: 'Ubuntu';
 	color: #fff;
 	background-color: #3131A6;
-
 }
 
 .text-white__Recordar{
 	font-family: 'Ubuntu';
-	font-weight: 500;
-	font-size: 12px;
 	color: #C5C5FF;
+	
 }
 
 .text-white__Recordar:hover{
