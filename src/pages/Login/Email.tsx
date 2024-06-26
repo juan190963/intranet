@@ -4,9 +4,9 @@ import { EmailRecuperation } from '@/components/molecules/Recuperation/Recuperat
 const Email : React.FC = () => {
     return (
       
-            <div className='w-full sm:w-2/6'>
+            
             <EmailRecuperation/>
-        </div>
+         
       
     );
 };

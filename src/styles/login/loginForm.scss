@@ -61,8 +61,8 @@
 
 @media  (max-width: 769px ) {
 	.container{
-		width: 789px;
-		height: 606px;
+		width: 100vh;
+		height: 656px;
 		border-radius: 0px 0px 69px 69px;
 		padding: 24px 12px 12px 12px;
 		gap: 24px;
@@ -100,7 +100,9 @@
 	}
 	
 	.input__Password{
-		
+		font-family: 'Ubuntu';
+		font-weight: 600;
+		font-size: 20px;
 		width: 580px;
 		height: 52px;
 		top: 6px;
@@ -124,7 +126,37 @@
 		right: 150px;
 		bottom: 20px;
 	}
+
+	.loginButton{
+		position: relative;
+		bottom: 15px;
+		font-family: 'Ubuntu';
+		font-weight: 800;
+		font-size: 22px;
+		color:#3131A6 ;
+		width: 209px;
+		height: 60px;
+
+	}
 	
+	.loginButton:hover{
+		font-family: 'Ubuntu';
+		color: #fff;
+		background-color: #3131A6;
+	}
+
+	.text-white__Recordar{
+		font-family: 'Ubuntu';
+		font-weight: 500;
+		font-size: 20px;
+		color: #C5C5FF;
+		
+	}
+	
+	.text-white__Recordar:hover{
+		color: #fff;
+	}
+
 }
 
 

@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
-import '@/styles/login/loginForm.scss'
-import '@/styles/login/componentLogin.scss'
+import '@/styles/login/password_Recuperation.scss'
 import { useForm } from 'react-hook-form';
 import { ErrorMessage } from '../../atoms/ErrorMessage/ErrorMessage';
 import { LoginData } from '@/types/authTypes';
@@ -50,13 +49,13 @@ export const PasswordRecuperation: React.FC = () => {
 
     return (
         <>
-            <div className='flex flex-col justify-center container h-full '>
+            <div className='flex flex-col justify-center container__pasword h-full '>
                 <div className='flex justify-center mt-5 sm:mt-0'>
                     <Logo width={size.width < 768 ? '100' : '173'} height='auto' />
                 </div>
                 <div className='flex max-sm:px-5 mt-5 mb-2 sm:mt-0 sm:mb-0 px-10 items-center justify-center sm:h-20 flex-col text-white'>
-                    <h1 className='text-white title font-bold text-lg text-center'>ELIGE UNA CONTRASEÑA SEGURA</h1>
-                    <p className='text-white font-light text-sm text-center'>(números letras y caracteres especiales)</p>
+                    <h1 className='text-white title__pasword font-bold text-lg text-center'>ELIGE UNA CONTRASEÑA SEGURA</h1>
+                    <p className='text-white__pasword font-light text-sm text-center'>(números letras y caracteres especiales)</p>
                 </div>
                 <form
                     onSubmit={handleSubmit(onSubmit)}
@@ -66,7 +65,7 @@ export const PasswordRecuperation: React.FC = () => {
                         <div className='mb-6'>
                             <label
                                 htmlFor='password'
-                                className='block text-base font-medium text-white credentials ml-7'
+                                className='block text-base font-medium text-white credentials__pasword ml-7'
                             >
                                 Contraseña
                                 <div className='relative'>
@@ -74,8 +73,8 @@ export const PasswordRecuperation: React.FC = () => {
                                         id='password'
                                         {...register('password', inputProps.password)}
                                         type={showPassword ? 'text' : 'password'}
-                                        className={`input focus-visible:shadow-none ${errors.password ? 'input--error ' : ''} input input__Password bg-indigo-600 border-solid credentials`}
-                                        placeholder='Contraseña'
+                                        className={`input focus-visible:shadow-none ${errors.password ? 'input--error ' : ''} input__pasword  bg-indigo-600 border-solid credentials__pasword `}
+                                        placeholder='contraseña'
                                     />
                                     <button
                                         type='button'
@@ -83,9 +82,9 @@ export const PasswordRecuperation: React.FC = () => {
                                         onClick={togglePasswordVisibility}
                                     >
                                         {showPassword ? (
-                                            <img src={disguise} className='relative right-10 text-blue-600  show__password' />
+                                            <img src={disguise} className='relative right-10 text-blue-600  show__password_' />
                                         ) : (
-                                            <img src={show} className='relative right-10 text-blue-600  show__password' />
+                                            <img src={show} className='relative right-10 text-blue-600  show__password_' />
                                         )}
                                     </button>
                                 </div>
@@ -93,7 +92,7 @@ export const PasswordRecuperation: React.FC = () => {
                             </label>
                             <label
                                 htmlFor='confirmPassword'
-                                className='block text-base font-medium text-white credentials ml-7'
+                                className='block text-base font-medium text-white credentials__pasword ml-7'
                             >
                                 Confirmar contraseña
                                 <div className='relative'>
@@ -104,8 +103,8 @@ export const PasswordRecuperation: React.FC = () => {
                                             validate: (value) => value === watch('password') || 'Las contraseñas no coinciden'
                                         })}
                                         type={confirmPassword ? 'text' : 'password'}
-                                        className={`input focus-visible:shadow-none ${errors.confirmPassword ? 'input--error' : ''} input input__Password bg-indigo-600 border-solid credentials`}
-                                        placeholder='Confirmar'
+                                        className={`input focus-visible:shadow-none ${errors.confirmPassword ? 'input--error' : ''} input__pasword bg-indigo-600 border-solid credentials__pasword `}
+                                        placeholder='confirmar'
                                     />
                                     <button
                                         type='button'
@@ -113,25 +112,28 @@ export const PasswordRecuperation: React.FC = () => {
                                         onClick={togglePasswordVisibilityconfirm}
                                     >
                                         {confirmPassword ? (
-                                            <img src={disguise} className=' relative right-10 text-blue-600  show__password' />
+                                            <img src={disguise} className=' relative right-10 text-blue-600  show__password_' />
                                         ) : (
-                                            <img src={show} className=' relative right-10 text-blue-600  show__password' />
+                                            <img src={show} className=' relative right-10 text-blue-600  show__password_' />
                                         )}
                                     </button>
                                 </div>
 								<ErrorMessage error={errors.confirmPassword?.message } />
                             </label>
                         </div>
-                        <div className='flex justify-center gap-6'>
-                            <button type='submit' className='w-20 h-10 bg-indigo-300 font-bold text-sm text-center text-indigo-950 top-5 Recuperation__return'>
-                                <Link to='/email' rel='noreferrer' className='text-white__return'>
-                                    VOLVER
-                                </Link>
-                            </button>
-                            <button type='submit' className='w-20 h-10 bg-white font-bold text-sm text-center text-indigo-950 top-5 Recuperation__send'>
-                                ENVIAR
-                            </button>
-                        </div>
+                        <div className='flex buttons____pasword '>
+							<button type='submit' className='relative w-20 h-10 bg-indigo-300 font-bold text-sm text-center text-indigo-950	
+							top-5   Recuperation__return__pasword '>
+							<Link to='/email' rel='noreferrer' className='text-white__return__pasword'>
+								VOLVER
+							</Link>
+							</button>
+
+							<button type='submit' className='relative w-20 h-10 bg-white font-bold text-sm text-center text-indigo-950	
+							top-5  Recuperation__send__pasword '>
+								ENVIAR
+							</button>
+						</div>
                     </div>
                 </form>
             </div>

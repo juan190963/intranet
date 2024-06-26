@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import '@/styles/login/loginForm.scss';
-import '@/styles/login/componentLogin.scss';
 import { useForm } from 'react-hook-form';
 import { ErrorMessage } from '../../atoms/ErrorMessage/ErrorMessage';
 import { LoginData } from '@/types/authTypes';
@@ -126,7 +125,7 @@ export const LoginForm: React.FC = () => {
 							INICIAR SESIÓN
 						</button>
 						<div className='flex justify-center sm:mt-2 '>
-							<Link to='/email' rel='noreferrer' className=' text-white__Recordar font-medium text-xs 		'>
+							<Link to='/email' rel='noreferrer' className=' text-white__Recordar font-medium text-xs'>
 								Recordar contraseña
 							</Link>
 						</div>

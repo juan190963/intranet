@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
-import '../../../styles/login/loginForm.scss'
-import '../../../styles/login/componentLogin.scss'
+import '../../../styles/login/email_recuperation.scss'
 import { useForm } from 'react-hook-form';
 import { ErrorMessage } from '../../atoms/ErrorMessage/ErrorMessage';
 import { LoginData } from '@/types/authTypes';
@@ -39,12 +38,12 @@ export const EmailRecuperation: React.FC = () => {
 
 	return (
 		<>
-			<div className='flex flex-col justify-center container h-full '>
+			<div className='flex flex-col justify-center container__email h-full '>
 				<div className='flex justify-center mt-5 sm:mt-0'>
 					<Logo width={size.width < 768 ? '100' : '173'} height='auto' />
 				</div>
 				<div className='flex max-sm:px-5 mt-5 mb-2 sm:mt-0 sm:mb-0 px-10 items-center justify-center sm:h-20'>
-					<h1 className='text-white title font-bold text-lg text-center'>INGRESA TU E-MAIL EMPRESARIAL PARA CAMBIAR LA CONTRASEÑA</h1>
+					<h1 className='text-white title__email font-bold text-lg text-center'>INGRESA TU E-MAIL EMPRESARIAL PARA CAMBIAR LA CONTRASEÑA</h1>
 				</div>
 				<form
 					onSubmit={handleSubmit(onSubmit)}
@@ -54,7 +53,7 @@ export const EmailRecuperation: React.FC = () => {
 						<div className='mb-2'>
 							<label
 								htmlFor='email'
-								className='block text-base font-medium text-white credentials ml-7'
+								className='block text-base font-medium text-white credentials__email ml-7'
 							>
 								email empresarial
 								<input
@@ -62,7 +61,7 @@ export const EmailRecuperation: React.FC = () => {
 									id='email'
 									autoComplete='off'
 									{...register('email', inputProps.email)}
-									className={`input focus-visible:shadow-none ${errors.email ? 'input--error' : ''} input bg-indigo-600 border-solid	credentials ` }
+									className={`input focus-visible:shadow-none ${errors.email ? 'input--error' : ''} input__email bg-indigo-600 border-solid` }
 									placeholder='@pernine.com'
 								/>
 								<ErrorMessage error={errors.email?.message} />
@@ -70,16 +69,16 @@ export const EmailRecuperation: React.FC = () => {
 							
 						</div>
 						
-						<div className='flex '>
+						<div className='flex buttons__email '>
 							<button type='submit' className='relative w-20 h-10 bg-indigo-300 font-bold text-sm text-center text-indigo-950	
-							top-5   Recuperation__return '>
-							<Link to='/login' rel='noreferrer' className='text-white__return'>
+							top-5   Recuperation__return__email '>
+							<Link to='/login' rel='noreferrer' className='text-white__return__email'>
 								VOLVER
 							</Link>
 							</button>
 
 							<button type='submit' className='relative w-20 h-10 bg-white font-bold text-sm text-center text-indigo-950	
-							top-5  Recuperation__send '>
+							top-5  Recuperation__send__email '>
 								ENVIAR
 							</button>
 						</div>

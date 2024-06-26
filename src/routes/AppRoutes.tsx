@@ -23,7 +23,7 @@ interface RouteProps {
 export const AppRoutes: React.FC = () => {
 	const routes: RouteProps[] = [
 		{
-			layout: lazy(async () => await import('@/pages/Login/TemplateLogin')),
+			layout: lazy(async () => await import('@/components/template/TemplateLogin')),
 			children: [
 				{
 					path: '/login',
