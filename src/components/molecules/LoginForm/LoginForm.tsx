@@ -14,10 +14,7 @@ import useWindowSize from '@/utils/hooks/useWindowSize';
 import show from '@/assets/login/images/showPassword.svg';
 import disguise from '@/assets/login/images/disguisePassword.svg';
 
-
-
 export const LoginForm: React.FC = () => {
-
 	const {
 		handleSubmit,
 		register,
@@ -43,25 +40,26 @@ export const LoginForm: React.FC = () => {
 		}
 	};
 
-
 	return (
 		<>
-			<div className='flex flex-col justify-center container h-full  '>
-				<div className='flex justify-center mt-5 sm:mt-0 logo'>
-					<Logo width={size.width < 768 ? '100' : '173'} height='auto' />
+			<div className='flex flex-col justify-center login-form__container h-full'>
+				<div className='flex justify-center sm:mt-0 logo'>
+					<Logo width={size.width < 768 ? '100' : '30%'} height='auto' />
 				</div>
 				<div className='flex max-sm:px-5 mt-5 mb-2 sm:mt-0 sm:mb-0 px-10 items-center justify-center sm:h-20'>
-					<h1 className='text-white title font-bold text-lg text-center '>BIENVENIDO A NUESTRA INTRANET</h1>
+					<h1 className='text-white title font-bold text-lg text-center '>
+						BIENVENIDO A NUESTRA INTRANET
+					</h1>
 				</div>
 				<form
 					onSubmit={handleSubmit(onSubmit)}
-					className='pt-2 pb-10 max-sm:px-5 px-10 rounded-b-xl'
+					className='pt-2 sm:pb-10 max-sm:px-1 px-10 rounded-b-xl'
 				>
-					<div className='max-w-xs block mx-auto'>
+					<div className='sm:max-w-xs block mx-auto'>
 						<div className='mb-2 '>
 							<label
 								htmlFor='email'
-								className='block text-base font-medium text-white credentials ml-7 '
+								className='block text-xs sm:text-base text-white credentials sm:ml-7 '
 							>
 								email empresarial
 								<input
@@ -72,15 +70,13 @@ export const LoginForm: React.FC = () => {
 									{...register('email', inputProps.email)}
 									className={`input focus-visible:shadow-none  ${errors.email ? 'input--error' : ''} input bg-indigo-600 border-solid	 border-indigo-900`}
 								/>
-							<ErrorMessage error={errors.email?.message}  />
+								<ErrorMessage error={errors.email?.message} />
 							</label>
-							
-							
 						</div>
-						<div className='mb-6'>
+						<div className='mb-2 sm:mb-6'>
 							<label
 								htmlFor='password'
-								className='block text-base font-medium text-white credentials ml-7 mt-3	'
+								className='block text-xs sm:text-base text-white credentials sm:ml-7 mt-3	'
 							>
 								contraseña
 								<div className='relative'>
@@ -88,44 +84,48 @@ export const LoginForm: React.FC = () => {
 										id='password'
 										{...register('password', inputProps.password)}
 										type={showPassword ? 'text' : 'password'}
-										className={`input focus-visible:shadow-none ${errors.password ? 'input--error' : ''} input__Password bg-indigo-600 border-solid	 
-										border-indigo-900input bg-indigo-600 border-solid	 border-indigo-900 `}
+										className={`input py-3 px-4 block w-full border-gray-200 rounded-lg text-sm  ${errors.password ? 'input--error' : ''} input__Passwor
+										border-indigo-900input bg-indigo-600 border-solid border-indigo-900 `}
 										placeholder='contraseña'
 									/>
 									<button
 										type='button'
-										className='absolute inset-y-0 right-0 px-5 py-1 flex items-center focus:outline-none'
+										className='absolute top-1.5 right-4'
 										onClick={togglePasswordVisibility}
 									>
 										{showPassword ? (
-											<img src={disguise} className='relative right-10  text-blue-600 disguise__password' />
+											<img src={disguise} className='h-5 w-5' />
 										) : (
-											<img src={show} className='relative right-10 text-blue-600  show__password' />
+											<img src={show} className='h-5 w-5' />
 										)}
 									</button>
 								</div>
 								<ErrorMessage error={errors.password?.message} />
 							</label>
-							
 						</div>
 
-						<div className='flex mr-6'>
-							<label htmlFor="rememberMe" className='block text-base font-medium text-xs text-white remember ml-7	' >recuerdame</label>
-							<input
-								type="checkbox"
-								id="rememberMe"
-								className=' ml-2 remember'
-							/>
+						<div className='flex mb-5 sm:mb-6'>
+							<label
+								htmlFor='rememberMe'
+								className='block font-medium text-xs text-white remember ml-4 sm:ml-7'
+							>
+								recuerdame
+							</label>
+							<input type='checkbox' id='rememberMe' className=' ml-2 remember' />
 						</div>
 
 						<button
 							type='submit'
-							className='block m-auto mt-5 px-4 py-2 bg-white font-bold text-xs rounded-lg loginButton'
+							className='block m-auto sm:mt-5 px-4 py-2 bg-white font-bold text-xs rounded-lg loginButton'
 						>
 							INICIAR SESIÓN
 						</button>
-						<div className='flex justify-center sm:mt-2 '>
-							<Link to='/email' rel='noreferrer' className=' text-white__Recordar font-medium text-xs'>
+						<div className='flex justify-center mt-2'>
+							<Link
+								to='/email'
+								rel='noreferrer'
+								className=' text-white__Recordar mt-1 font-medium text-xs'
+							>
 								Recordar contraseña
 							</Link>
 						</div>

@@ -1,163 +1,108 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-.container {
+.login-form__container {
 	background-color: var(--primary-color);
 	border-radius: 0px 109px 109px 0px;
-	width: 510px;
-	height: 980px;
 }
 
-.title{
+.title {
 	font-family: 'Ubuntu';
 	color: #ffffff;
 }
 
-.credentials{
+.credentials {
 	font-family: 'Ubuntu';
 	color: #bbbbf8;
 }
 
-.input{
+.input {
 	color: #bbbbf8;
 	border: 2px solid #1B1B79;
 	border-radius: 3px;
-	width: 250px;
 	height: 31px;
 	border: 2px;
 }
 
-.input__Password{
+.input__Password {
 	width: 250px;
 	height: 32px;
 }
 
 .input:focus {
-	background-color:  #3131A6;
+	background-color: #3131A6;
 	border: 2px solid #1B1B79;
-  }
-
-.loginButton{
-	font-family: 'Ubuntu';
-	color:#3131A6 ;
 }
 
-.loginButton:hover{
+.loginButton {
+	font-family: 'Ubuntu';
+	color: #3131A6;
+}
+
+.loginButton:hover {
 	font-family: 'Ubuntu';
 	color: #fff;
 	background-color: #3131A6;
 }
 
-.text-white__Recordar{
+.text-white__Recordar {
 	font-family: 'Ubuntu';
 	color: #C5C5FF;
-	
+
 }
 
-.text-white__Recordar:hover{
+.text-white__Recordar:hover {
 	color: #fff;
 }
 
+.templateLogin__container--img {
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 1rem;
+	background-image: url('@/assets/login/images/bg-login.png');
+}
 
 
-@media  (max-width: 769px ) {
-	.container{
-		width: 100vh;
-		height: 656px;
+
+@media (max-width: 769px) {
+	.login-form__container {
 		border-radius: 0px 0px 69px 69px;
 		padding: 24px 12px 12px 12px;
-		gap: 24px;
-		padding-top: 50px;
 	}
 
-	.title{
-		font-size: 27px;
-		font-weight: 700;
-		text-align: center;
-	}
-
-	.credentials{
-		position: relative;
-		font-family: 'Ubuntu';
-		font-weight: 600;
-		font-size: 20px;
-		color: #bbbbf8;
-		position: relative;
-		bottom: 20px;
-		right: 165px;
-		padding: 0px 0px 10px 10px
-	}
-	
-	.input{
-		position: relative;
+	.input {
 		color: #bbbbf8;
 		border: 2px solid #1B1B79;
 		border-radius: 3px;
-		width: 580px;
-		height: 50px;
 		border: 2px;
-		top: 4px;
-		
 	}
-	
-	.input__Password{
+
+	.input__Password {
 		font-family: 'Ubuntu';
 		font-weight: 600;
 		font-size: 20px;
-		width: 580px;
-		height: 52px;
-		top: 6px;
-		
 	}
 
-	.disguise__password,
-	.show__password{
-		position: relative;
-		left: 290px;
-		top: 6px;
-		width: 40px;
-	}
 
-	.remember{
+	.remember {
 		font-family: 'Ubuntu';
 		font-weight: 500;
-		font-size: 19px;
 		color: #bbbbf8;
-		position: relative;
-		right: 150px;
-		bottom: 20px;
 	}
 
-	.loginButton{
-		position: relative;
-		bottom: 15px;
-		font-family: 'Ubuntu';
-		font-weight: 800;
-		font-size: 22px;
-		color:#3131A6 ;
-		width: 209px;
-		height: 60px;
-
-	}
-	
-	.loginButton:hover{
+	.loginButton:hover {
 		font-family: 'Ubuntu';
 		color: #fff;
 		background-color: #3131A6;
 	}
 
-	.text-white__Recordar{
-		font-family: 'Ubuntu';
-		font-weight: 500;
-		font-size: 20px;
-		color: #C5C5FF;
-		
-	}
-	
-	.text-white__Recordar:hover{
+	.text-white__Recordar:hover {
 		color: #fff;
 	}
 
+	.templateLogin__container--img {
+		background-image: url('@/assets/login/images/bg-login-mobile.png');
+		margin-right: 0;
+		margin-left: 0;
+	}
 }
-
-
-
