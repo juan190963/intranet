@@ -83,13 +83,13 @@ export const PasswordRecuperation: React.FC = () => {
                                         onClick={togglePasswordVisibility}
                                     >
                                         {showPassword ? (
-                                            <img src={disguise} className='relative right-10 text-blue-600 disguise__password' />
+                                            <img src={disguise} className='relative right-10 text-blue-600  show__password' />
                                         ) : (
-                                            <img src={show} className='relative right-10 text-blue-600 show__password' />
+                                            <img src={show} className='relative right-10 text-blue-600  show__password' />
                                         )}
                                     </button>
-                                    <ErrorMessage error={errors.password?.message} />
                                 </div>
+								<ErrorMessage error={errors.password?.message} />
                             </label>
                             <label
                                 htmlFor='confirmPassword'
@@ -113,13 +113,13 @@ export const PasswordRecuperation: React.FC = () => {
                                         onClick={togglePasswordVisibilityconfirm}
                                     >
                                         {confirmPassword ? (
-                                            <img src={disguise} className='relative right-10 text-blue-600 show__password' />
+                                            <img src={disguise} className=' relative right-10 text-blue-600  show__password' />
                                         ) : (
-                                            <img src={show} className='relative right-10 text-blue-600 show__password' />
+                                            <img src={show} className=' relative right-10 text-blue-600  show__password' />
                                         )}
                                     </button>
-                                    <ErrorMessage error={errors.confirmPassword?.message } />
                                 </div>
+								<ErrorMessage error={errors.confirmPassword?.message } />
                             </label>
                         </div>
                         <div className='flex justify-center gap-6'>

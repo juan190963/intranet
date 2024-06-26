@@ -47,8 +47,8 @@ export const LoginForm: React.FC = () => {
 
 	return (
 		<>
-			<div className='flex flex-col justify-center container h-full '>
-				<div className='flex justify-center mt-5 sm:mt-0'>
+			<div className='flex flex-col justify-center container h-full  '>
+				<div className='flex justify-center mt-5 sm:mt-0 logo'>
 					<Logo width={size.width < 768 ? '100' : '173'} height='auto' />
 				</div>
 				<div className='flex max-sm:px-5 mt-5 mb-2 sm:mt-0 sm:mb-0 px-10 items-center justify-center sm:h-20'>
@@ -71,10 +71,12 @@ export const LoginForm: React.FC = () => {
 									autoComplete='off'
 									placeholder='@pernine.com'
 									{...register('email', inputProps.email)}
-									className={`input focus-visible:shadow-none ${errors.email ? 'input--error' : ''} input bg-indigo-600 border-solid	 border-indigo-900`}
+									className={`input focus-visible:shadow-none  ${errors.email ? 'input--error' : ''} input bg-indigo-600 border-solid	 border-indigo-900`}
 								/>
-							</label>
 							<ErrorMessage error={errors.email?.message}  />
+							</label>
+							
+							
 						</div>
 						<div className='mb-6'>
 							<label
@@ -88,7 +90,7 @@ export const LoginForm: React.FC = () => {
 										{...register('password', inputProps.password)}
 										type={showPassword ? 'text' : 'password'}
 										className={`input focus-visible:shadow-none ${errors.password ? 'input--error' : ''} input__Password bg-indigo-600 border-solid	 
-										border-indigo-900input bg-indigo-600 border-solid	 border-indigo-900 credentials`}
+										border-indigo-900input bg-indigo-600 border-solid	 border-indigo-900 `}
 										placeholder='contraseña'
 									/>
 									<button
@@ -103,12 +105,13 @@ export const LoginForm: React.FC = () => {
 										)}
 									</button>
 								</div>
+								<ErrorMessage error={errors.password?.message} />
 							</label>
-							<ErrorMessage error={errors.password?.message} />
+							
 						</div>
 
 						<div className='flex mr-6'>
-							<label htmlFor="rememberMe" className='block text-base font-medium text-xs text-white credentials ml-7	' >recuerdame</label>
+							<label htmlFor="rememberMe" className='block text-base font-medium text-xs text-white remember ml-7	' >recuerdame</label>
 							<input
 								type="checkbox"
 								id="rememberMe"

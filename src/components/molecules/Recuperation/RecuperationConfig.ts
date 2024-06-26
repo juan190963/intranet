@@ -1,4 +1,3 @@
-
 export const inputProps = {
 	
 	password: {
@@ -7,7 +6,7 @@ export const inputProps = {
 
 	confirmPassword: {
 		required: 'Debes confirmar tu contraseña',
-		validate: (value: string, context: any) => value === context.watch('password') || 'Las contraseñas no coinciden',
+		validate: (value: string, context: any) => value === context.watch('password') || 'Las contraseñas no coinciden'
 	},
 	
 };

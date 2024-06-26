@@ -1,7 +1,6 @@
 // src/components/Template.tsx
 import React from 'react';
 import '@/styles/login/imagenesLogin.scss'
-
 import JSPORT from '@/assets/login/images/JSPORT.jpg';
 import KAPPA from '@/assets/login/images/KAPPA.jpg';
 import NEW from '@/assets/login/images/NEW.jpg';
@@ -16,11 +15,11 @@ type TemplateProps = {
 
 const Login: React.FC<TemplateProps> = ({ children }) => {
 return (
-    <div className='flex flex-col sm:flex-row  gap-x-8 h-full'>
+    <div className='flex flex-col sm:flex-row  gap-x-8 h-full contenedor'>
         <div className='w-full sm:w-2/6'>
             {children}
         </div>
-        {<div>
+        {<div >
 
             {/* <img src={JSPORT} className='img-login__jsport ' />
 
@@ -28,7 +27,7 @@ return (
 
             <img src={NEW} className='img-login__new' />
 
-            <img src={TNF} className='img-login__tnf' />
+             <img src={TNF} className='img-login__tnf' />
 
             <img src={SG} className='img-login__sg' />
 

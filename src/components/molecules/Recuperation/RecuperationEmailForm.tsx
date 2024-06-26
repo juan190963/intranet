@@ -65,13 +65,14 @@ export const EmailRecuperation: React.FC = () => {
 									className={`input focus-visible:shadow-none ${errors.email ? 'input--error' : ''} input bg-indigo-600 border-solid	credentials ` }
 									placeholder='@pernine.com'
 								/>
+								<ErrorMessage error={errors.email?.message} />
 							</label>
-							<ErrorMessage error={errors.email?.message} />
+							
 						</div>
 						
-						<div className='flex'>
+						<div className='flex '>
 							<button type='submit' className='relative w-20 h-10 bg-indigo-300 font-bold text-sm text-center text-indigo-950	
-							top-5  Recuperation__return '>
+							top-5   Recuperation__return '>
 							<Link to='/login' rel='noreferrer' className='text-white__return'>
 								VOLVER
 							</Link>

@@ -69,3 +69,11 @@
 	border-radius: 120px 0px  120px 0Px ;
 	object-fit: cover;
 }
+
+
+@media  (max-width: 769px ){
+	.contenedor{
+		flex-direction: column;
+}
+
+}
