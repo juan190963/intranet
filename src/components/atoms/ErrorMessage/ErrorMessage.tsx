@@ -12,7 +12,7 @@ interface ErrorMessageProps {
 
 export const ErrorMessage: React.FC<ErrorMessageProps> = ({ error }) =>
 	error ? (
-		<div className='text-xs text-red-700 mt-2'>
+		<div className='text-xs  mt-2 errorMessage'>
 			{typeof error === 'string' && error}
 		</div>
 	) : null;

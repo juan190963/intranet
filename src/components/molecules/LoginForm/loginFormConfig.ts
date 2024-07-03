@@ -8,12 +8,13 @@ export const inputProps = {
 	},
 	password: {
 		required: 'Debes ingresar una contraseña',
+		class: 'texto111111'
 	},
 	createPassword: {
 		required: 'Debes ingresar una contraseña',
 		pattern: {
 			value: /(?:(?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/,
-			message:
+			message :
 				'La contraseña debe contener al menos una letra mayúscula, una letra minúscula y un carácter especial.',
 		},
 	},

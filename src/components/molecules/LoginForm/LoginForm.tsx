@@ -13,6 +13,8 @@ import show from '@/assets/login/images/showPassword.svg';
 import disguise from '@/assets/login/images/disguisePassword.svg';
 
 export const LoginForm: React.FC = () => {
+
+	
 	const {
 		handleSubmit,
 		register,
@@ -24,7 +26,6 @@ export const LoginForm: React.FC = () => {
 
 
 	useEffect(() => {
-		//sale error
 	}, [user]);
 
 	const onSubmit = async (data: LoginData) => {
@@ -40,37 +41,36 @@ export const LoginForm: React.FC = () => {
 
 	return (
 		<>
-	
-				{/* <h1 className='text-white title font-bold text-lg text-center '>
-					BIENVENIDO A NUESTRA INTRANET
-				</h1> */}
-				
+
 			<form
 				onSubmit={handleSubmit(onSubmit)}
-				className='pt-2 sm:pb-10 max-sm:px-1 px-10 rounded-b-xl'
+				className=' sm:pb-10 max-sm:px-1 px-10 rounded-b-xl  '
 			>
-				<div className='sm:max-w-xs block mx-auto'>
+				<div className='sm:max-w-xs block mx-auto '>
 					<div className='mb-2 '>
 						<label
 							htmlFor='email'
-							className='block text-xs sm:text-base text-white credentials sm:ml-7 '
+							className={`mb-2 ${errors.email ? 'credential' : ''} block text-base sm:text-base text-white credentials sm:ml-7 font-medium`} 
 						>
 							email empresarial
+						<div>
 							<input
 								type='email'
 								id='email'
 								autoComplete='off'
-								placeholder='@pernine.com'
+								placeholder='ejemplo@pernine.com.co'
 								{...register('email', inputProps.email)}
-								className={`input focus-visible:shadow-none  ${errors.email ? 'input--error' : ''} input bg-indigo-600 border-solid	 border-indigo-900`}
-							/>
+								className={`input__Password py-3 px-4 block w-full  rounded-lg text-base ${errors.email ? 'input--error ' : ''} 
+								border-indigo-900input bg-indigo-600 border-solid border-indigo-900 `}							/>
+						</div>
+							
 							<ErrorMessage error={errors.email?.message} />
 						</label>
 					</div>
-					<div className='mb-2 sm:mb-6'>
+					<div className='mb-2 sm:mb-2'>
 						<label
 							htmlFor='password'
-							className='block text-xs sm:text-base text-white credentials sm:ml-7 mt-3	'
+							className={`mb-2 ${errors.password ? 'credential' : ''} block text-base sm:text-base text-white credentials sm:ml-7 font-medium`} 
 						>
 							contraseña
 							<div className='relative'>
@@ -78,9 +78,10 @@ export const LoginForm: React.FC = () => {
 									id='password'
 									{...register('password', inputProps.password)}
 									type={showPassword ? 'text' : 'password'}
-									className={`input py-3 px-4 block w-full border-gray-200 rounded-lg text-sm  ${errors.password ? 'input--error' : ''} input__Passwor
-										border-indigo-900input bg-indigo-600 border-solid border-indigo-900 `}
 									placeholder='contraseña'
+								className={`input__Password py-3 px-4 block w-full  rounded-lg text-base ${errors.password ? 'input--error' : ''} 
+									border-indigo-900input bg-indigo-600 border-solid border-indigo-900 `}
+
 								/>
 								<button
 									type='button'
@@ -93,8 +94,9 @@ export const LoginForm: React.FC = () => {
 										<img src={show} className='h-5 w-5' />
 									)}
 								</button>
+								
 							</div>
-							<ErrorMessage error={errors.password?.message} />
+							<ErrorMessage  error={errors.password?.message}/>
 						</label>
 					</div>
 

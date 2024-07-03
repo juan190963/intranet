@@ -12,7 +12,28 @@
 
 .credentials {
 	font-family: 'Ubuntu';
-	color: #bbbbf8;
+}
+
+.credential {
+	color: #FFBABA;
+}
+
+.input--error {
+	background-color: #FFBABA;
+	border-color: #930D35;
+	color: #930D35 !important;
+}
+
+.input--error:focus {
+	background-color: #FFBABA !important;
+	border-color: #930D35 !important;
+	color: #930D35 !important;
+	border: 2px solid #930D35 !important;
+
+}
+
+.input--error::placeholder {
+	color: #930D35;
 }
 
 .input {
@@ -24,11 +45,18 @@
 }
 
 .input__Password {
-	width: 250px;
-	height: 32px;
+	width: 265px;
+	height: 31px;
+	border-radius: 3px;
 }
 
 .input:focus {
+	background-color: #3131A6;
+	border: 2px solid #1B1B79;
+}
+
+
+.input__Password:focus {
 	background-color: #3131A6;
 	border: 2px solid #1B1B79;
 }
@@ -63,41 +91,45 @@
 }
 
 
-.buttons{
-    display: flex;
+.buttons {
+	display: flex;
 }
 
 .Recuperation__return,
-.text-white__return{
-    font-family: 'Ubuntu';;
-    border-radius: 6px;
-    transition: box-shadow 0.1s ease;
-    left: 56px;
+.text-white__return {
+	font-family: 'Ubuntu';
+	;
+	border-radius: 6px;
+	transition: box-shadow 0.1s ease;
+	left: 56px;
 }
 
-.Recuperation__return:hover{
-    color: #1B1B79;
-    background-color: #fff;
-    box-shadow: 0px 5px 6px rgba(161, 157, 221, 0.7); 
+.Recuperation__return:hover {
+	color: #1c1c88;
+	background-color: #fff;
+	box-shadow: 0px 5px 6px rgba(161, 157, 221, 0.7);
 }
 
-.Recuperation__send{
-    border-radius: 6px;
-    font-family: 'Ubuntu';
-    left: 90px;
+.Recuperation__send {
+	border-radius: 6px;
+	font-family: 'Ubuntu';
+	left: 90px;
 }
 
-.Recuperation__send:hover{
-    background-color: #1B1B79;
-    color: #fff;
+.Recuperation__send:hover {
+	background-color: #1B1B79;
+	color: #fff;
 }
-
-
 
 @media (max-width: 769px) {
 	.login-form__container {
-		border-radius: 0px 0px 69px 69px;
+
+		border-radius: 0px 0px 50px 50px;
 		padding: 24px 12px 12px 12px;
+	}
+
+	.title {
+		margin-top: 10px;
 	}
 
 	.input {
@@ -105,12 +137,16 @@
 		border: 2px solid #1B1B79;
 		border-radius: 3px;
 		border: 2px;
+		width: 360px;
+		height: 36px;
 	}
 
 	.input__Password {
 		font-family: 'Ubuntu';
-		font-weight: 600;
-		font-size: 20px;
+		font-weight: 500;
+		font-size: 15px;
+		width: 360px;
+		height: 36px;
 	}
 
 

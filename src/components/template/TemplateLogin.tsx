@@ -29,13 +29,13 @@ export const TemplateLogin: React.FC<TemplateProps> = ({ children }) => {
 
 	return (
 		<div className='flex flex-col md:flex-row gap-x-6 h-full'>
-			<div className='w-full md:w-3/12 max-sm:h-2/3'>
+			<div className='w-full md:w-3/12 max-sm:h-2/2'>
 				<div className='flex flex-col justify-center login-form__container h-full'>
 					<div className='flex justify-center  sm:mt-0 logo'>
 						<Logo width={size.width < 768 ? '100' : '30%'} height='auto' />
 					</div>
 
-					<div className='flex-col  max-sm:px-5  mb-2 sm:mt-0 sm:mb-0 px-10 items-center justify-center sm:h-20'>
+					<div className='flex-col  max-sm:px-5  mb-2 sm:mt-5	 sm:mb-5 px-10 items-center justify-center sm:h-30'>
 						<h1 className='text-white title font-bold text-lg text-center'>{title}</h1>
 						<p className='text-white font-light text-sm text-center'>{paragraph}</p>
 					</div>
