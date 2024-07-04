@@ -35,7 +35,7 @@ export const TemplateLogin: React.FC<TemplateProps> = ({ children }) => {
 						<Logo width={size.width < 768 ? '100' : '30%'} height='auto' />
 					</div>
 
-					<div className='flex-col  max-sm:px-5  mb-2 sm:mt-5	 sm:mb-5 px-10 items-center justify-center sm:h-30'>
+					<div className='flex-col  max-sm:px-5  mb-2 sm:mt-8	 sm:mb-5 px-10 items-center justify-center sm:h-30'>
 						<h1 className='text-white title font-bold text-lg text-center'>{title}</h1>
 						<p className='text-white font-light text-sm text-center'>{paragraph}</p>
 					</div>

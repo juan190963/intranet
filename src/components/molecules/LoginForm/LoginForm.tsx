@@ -50,7 +50,7 @@ export const LoginForm: React.FC = () => {
 					<div className='mb-2 '>
 						<label
 							htmlFor='email'
-							className={`mb-2 ${errors.email ? 'credential' : ''} block text-base sm:text-base text-white credentials sm:ml-7 font-medium`} 
+							className={`mb-2 ${errors.email ? 'credential' : ''} block text-base sm:text-base text-white credentials sm:ml-7   font-medium`} 
 						>
 							email empresarial
 						<div>
